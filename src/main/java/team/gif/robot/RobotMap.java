@@ -9,6 +9,9 @@ public abstract class RobotMap {
     public static final int TEST_CONTROLLER_ID = 2;
     public static final int L_MOTOR_ID = 0;
     public static final int R_MOTOR_ID = 0;
+    public static final int COLLECTOR_ID = 1;
+    public static final int SHOOTER_ID = 5;
+
     public static final class Mk4Map extends SwerveMap {
         @Override
         protected void setIDs() {
@@ -53,6 +56,6 @@ public abstract class RobotMap {
     }
 
     public static final int PIGEON_ID = 9;
-    public static final int SHOOTER_ID = 0;
+
 
 }
