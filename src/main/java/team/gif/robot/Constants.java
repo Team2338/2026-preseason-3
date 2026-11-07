@@ -17,4 +17,5 @@ import edu.wpi.first.math.system.plant.DCMotor;
  */
 public final class Constants {
     public static final double SHOOTER_PERCENT_OUTPUT = 0.75;
+    public static final double COLLECTOR_PERCENT = 0.25;
 }

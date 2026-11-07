@@ -9,7 +9,7 @@ public abstract class RobotMap {
     public static final int TEST_CONTROLLER_ID = 2;
     public static final int L_MOTOR_ID = 28;
     public static final int R_MOTOR_ID = 31;
-    //public static final int COLLECTOR_ID = 5;
+    public static final int COLLECTOR_ID = 5;
     public static final int SHOOTER_ID = 1;
     public static final int PIGEON_ID = 9;
 }

@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import team.gif.robot.commands.ArcadeDrives;
+import team.gif.robot.subsystems.Collector;
 import team.gif.robot.subsystems.Shooter;
 import team.gif.robot.subsystems.DriveTrain;
 import team.gif.robot.subsystems.drivers.Pigeon2_0;
@@ -26,6 +27,7 @@ public class Robot extends TimedRobot {
     public static OI oi;
     public static Shooter shooter;
     public static Pigeon2_0 pigeon;
+    public static Collector collect;
     public static DriveTrain driveTrainC;
 
 
@@ -43,7 +45,7 @@ public class Robot extends TimedRobot {
         // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
         // autonomous chooser on the dashboard.
         robotContainer = new RobotContainer();
-
+        collect = new Collector();
         pigeon = new Pigeon2_0(RobotMap.PIGEON_ID);
         driveTrainC = new DriveTrain();
         shooter = new Shooter();
