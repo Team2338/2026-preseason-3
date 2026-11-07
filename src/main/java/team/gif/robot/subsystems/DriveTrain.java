@@ -17,7 +17,6 @@ public class DriveTrain extends SubsystemBase {
     private WPI_TalonSRX rMotor;
     private DifferentialDrive differentialDrive;
     public DriveTrain() {
-        differentialDrive = new DifferentialDrive(lMotor, rMotor);
         lMotor = new WPI_TalonSRX(RobotMap.L_MOTOR_ID);
         lMotor.configFactoryDefault();
         lMotor.setNeutralMode(NeutralMode.Brake);
@@ -25,6 +24,8 @@ public class DriveTrain extends SubsystemBase {
         rMotor = new WPI_TalonSRX(RobotMap.R_MOTOR_ID);
         rMotor.configFactoryDefault();
         rMotor.setNeutralMode(NeutralMode.Brake);
+
+        differentialDrive = new DifferentialDrive(lMotor, rMotor);
     }
     public void arcadeD(double speed, double turn) {
         differentialDrive.arcadeDrive(speed, turn);

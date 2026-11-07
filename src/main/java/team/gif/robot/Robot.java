@@ -45,6 +45,8 @@ public class Robot extends TimedRobot {
         robotContainer = new RobotContainer();
 
         pigeon = new Pigeon2_0(RobotMap.PIGEON_ID);
+        driveTrainC = new DriveTrain();
+        shooter = new Shooter();
         driveTrainC.setDefaultCommand(new ArcadeDrives());
         //These should be at or near the bottom
         oi = new OI();

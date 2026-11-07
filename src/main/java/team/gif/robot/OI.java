@@ -92,7 +92,7 @@ public class OI {
          *   aX.onTrue(new PrintCommand("aX"));
          */
 
-        aX.whileTrue(new Shoot());
+        dX.whileTrue(new Shoot());
 
     }
 }
