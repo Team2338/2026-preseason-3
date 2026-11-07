@@ -27,7 +27,7 @@ public class Robot extends TimedRobot {
     public static OI oi;
     public static Shooter shooter;
     public static Pigeon2_0 pigeon;
-    public static Collector collect;
+    public static Collector collector;
     public static DriveTrain driveTrainC;
 
 
@@ -45,7 +45,7 @@ public class Robot extends TimedRobot {
         // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
         // autonomous chooser on the dashboard.
         robotContainer = new RobotContainer();
-        collect = new Collector();
+        collector = new Collector();
         pigeon = new Pigeon2_0(RobotMap.PIGEON_ID);
         driveTrainC = new DriveTrain();
         shooter = new Shooter();

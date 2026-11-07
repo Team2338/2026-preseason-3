@@ -16,6 +16,6 @@ import edu.wpi.first.math.system.plant.DCMotor;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
-    public static final double SHOOTER_PERCENT_OUTPUT = 0.75;
-    public static final double COLLECTOR_PERCENT = 0.25;
+    public static final double SHOOTER_PERCENT_OUTPUT = 0.83;
+    public static final double COLLECTOR_PERCENT = 0.42;
 }
