@@ -1,14 +1,14 @@
-package team.gif.robot.commands;
+package team.gif.robot.commands.Scooper;
 
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj2.command.Command;
 import team.gif.robot.Constants;
 import team.gif.robot.Robot;
 
 public class ScoopDown extends Command {
-
     public ScoopDown() {
         super();
-        addRequirements(Robot.collect); // uncomment
+        addRequirements(Robot.collector);
     }
 
     // Called when the command is initially scheduled.
@@ -18,18 +18,16 @@ public class ScoopDown extends Command {
     // Called every time the scheduler runs (~20ms) while the command is scheduled
     @Override
     public void execute() {
-        Robot.collect.collect(-Constants.COLLECTOR_PERCENT);
+        Robot.collector.collect(Constants.COLLECTOR_PERCENT/2.2);
     }
 
     // Return true when the command should end, false if it should continue. Runs every ~20ms.
     @Override
-    public boolean isFinished() {
-        return false;
-    }
+    public boolean isFinished() {return false;}
 
     // Called when the command ends or is interrupted.
     @Override
     public void end(boolean interrupted) {
-        Robot.collect.collect(0);
+        Robot.collector.collect(0);
     }
 }

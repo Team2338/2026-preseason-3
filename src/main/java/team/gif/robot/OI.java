@@ -3,8 +3,11 @@ package team.gif.robot;
 import edu.wpi.first.wpilibj.DriverStation;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
-import team.gif.robot.commands.Shoot;
-import team.gif.robot.subsystems.Shooter;
+import team.gif.robot.commands.Scooper.ScoopDown;
+import team.gif.robot.commands.Scooper.ScoopIndexPosition;
+import team.gif.robot.commands.Scooper.ScoopUp;
+import team.gif.robot.commands.Shooter.Shoot;
+import team.gif.robot.commands.Shooter.ShootBackwards;
 
 public class OI {
     /*
@@ -92,7 +95,21 @@ public class OI {
          *   aX.onTrue(new PrintCommand("aX"));
          */
 
-        dX.whileTrue(new Shoot());
+        dRTrigger.whileTrue(new Shoot());
+        dLTrigger.whileTrue(new ShootBackwards());
+        dA.whileTrue(new ScoopUp());
+        dB.whileTrue(new ScoopIndexPosition());
+        dX.whileTrue(new ScoopDown());
+
+        //This is for the Competition Drive Team.
+        /*
+        aRTrigger.whileTrue(new Shoot());
+        aLTrigger.whileTrue(new ShootBackwards());
+        aA.whileTrue(new ScoopUp());
+        aB.whileTrue(new ScoopIndexPosition());
+        aX.whileTrue(new ScoopDown());
+        */
+
 
     }
 }
