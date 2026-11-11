@@ -102,13 +102,13 @@ public class OI {
         dX.whileTrue(new ScoopDown());
 
         //This is for the Competition Drive Team.
-        /*
+
         aRTrigger.whileTrue(new Shoot());
         aLTrigger.whileTrue(new ShootBackwards());
         aA.whileTrue(new ScoopUp());
         aB.whileTrue(new ScoopIndexPosition());
         aX.whileTrue(new ScoopDown());
-        */
+
 
 
     }
